@@ -27,6 +27,9 @@ Route::group(array('middleware' => 'auth'), function() {
 Route::get('/', function () {
    	return view('user.home');
 });
+Route::get('/stores', function () {
+   	return view('user.stores');
+});
 
 Route::auth();
 
