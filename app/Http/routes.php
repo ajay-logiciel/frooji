@@ -30,6 +30,9 @@ Route::get('/', function () {
 Route::get('/stores', function () {
    	return view('user.stores');
 });
+Route::get('/categories', function () {
+   	return view('user.categories');
+});
 
 Route::auth();
 

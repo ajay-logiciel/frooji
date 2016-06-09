@@ -351,3 +351,10 @@ footer .footer_bottom .share{
 	font-weight: bold;
 }
 /* Stores Page End*/
+
+/* Categories Page Start */
+
+.category_name ul li{
+	background: none;
+}
+/* Categories Page End */
