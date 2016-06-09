@@ -251,6 +251,8 @@ footer .footer_bottom .share{
 	padding-left: 10px;
 	width: 77%;
 	float: left;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
 }
 	
 .store_left{
@@ -311,11 +313,15 @@ footer .footer_bottom .share{
 	color: #565656;
     text-decoration: none;
 }
-.subcription{
+.store_right{
 	width: 23%;
 	float: right;
+}
+.subcription{
 	border:1px solid #bfbfbf;
-	background: #fff
+	background: #fff;
+	width:100%;
+	margin-bottom: 	20px;
 }
 .subcription h2{
 	width: 100%;
@@ -353,8 +359,28 @@ footer .footer_bottom .share{
 /* Stores Page End*/
 
 /* Categories Page Start */
-
 .category_name ul li{
 	background: none;
 }
 /* Categories Page End */
+
+
+/* Favourites Page Start */
+.no_favorites{
+	padding-bottom: 40px;
+	font-size: 14px;
+}
+.clear_favorites_btn{
+	color: #000;
+	text-decoration: none;
+	padding-left: 22px;
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -1012px!important;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    height: 18px;
+	/*background: url(http://frooji.com/wp-content/themes/coups/images/store.png) no-repeat scroll 3px center transparent;*/
+}
+.subcription_padding{
+	height:50px;
+}
+/* Favourites Page End */

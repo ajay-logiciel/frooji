@@ -29,21 +29,23 @@
 			@endforeach
 			</div>
 		</div>
-		<div class="subcription">
-			<h2>Frooji Coupon Subscription</h2>
-			<div>
-				Email Adress<br>
-				<input type="text" name="">
-			</div>
-			<div>
-				First Name<br>
-				<input type="text" name="">
-			</div>
-			<div>
-				
-			</div>
-			<div>
-				<button type="submit">SUBMIT</button>
+		<div class="store_right">
+			<div class="subcription">
+				<h2>Frooji Coupon Subscription</h2>
+				<div>
+					Email Adress<br>
+					<input type="text" name="">
+				</div>
+				<div>
+					First Name<br>
+					<input type="text" name="">
+				</div>
+				<div>
+					
+				</div>
+				<div>
+					<button type="submit">SUBMIT</button>
+				</div>
 			</div>
 		</div>
 	</div>

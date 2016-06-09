@@ -33,6 +33,9 @@ Route::get('/stores', function () {
 Route::get('/categories', function () {
    	return view('user.categories');
 });
+Route::get('/favorites', function () {
+   	return view('user.favorites');
+});
 
 Route::auth();
 
