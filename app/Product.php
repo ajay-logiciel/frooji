@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public $table = 'products';
 
     const FEED =  "Feed";
 
