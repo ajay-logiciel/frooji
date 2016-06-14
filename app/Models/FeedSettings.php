@@ -8,7 +8,7 @@ class FeedSettings extends Model
 {
     protected $table = 'feed_settings';
 
-    protected $activateRules = [
+    /*protected $activateRules = [
     	'id'		=> 'required',
     	'is_active' => 'required|boolean'
     ];
@@ -16,5 +16,5 @@ class FeedSettings extends Model
    	public function getActivateRules()
    	{
    		return $this->activateRules;
-   	} 
+   	}*/
 }

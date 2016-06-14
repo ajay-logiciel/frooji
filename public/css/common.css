@@ -386,9 +386,18 @@ footer .footer_bottom .share{
 /* Favourites Page End */
 
 /* Coopons Page Start */
-
+.coupon_left{
+	width:100%;
+	clear:both;
+}
 .coupon{
 	padding: 10px;
+    border: 1px solid #ADA8A5;
+    background: #fff;
+	width: 77%;
+	float: left;
+	margin-bottom: 10px;
+	border-radius:10px;
 }
 .coupon .company_name{
 	margin-bottom: 0px;
@@ -466,7 +475,8 @@ footer .footer_bottom .share{
 	float: right;
 	padding-top: 2px;
 	font-size: 12px;
-}.coupon_views{
+}
+.coupon_views{
 	float: right;
 	font-size: 12px;
 	padding-top: 2px;
@@ -474,4 +484,94 @@ footer .footer_bottom .share{
 	padding-left: 20px;
 	background: url(http://frooji.com/wp-content/themes/coups/images/chart-bar.png) no-repeat scroll 0 1px transparent;
 }
+.deal_exp,
+.coupon_views{
+	margin-top: 20px;
+}
+
+.coupon_footer{
+	float: left;
+	margin-top: 10px;
+}
+.thumb_up,
+.thumb_down{
+	width: 35px;
+	height: 35px;
+	padding: 6px;
+	float: left;
+	border:1px solid rgba(128,128,128,0.43);
+}
+.coupon_footer .thumb_up a div{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -934px !important;
+    height: 20px;
+    width: 20px;
+}
+.coupon_footer .thumb_up a div:hover,
+.coupon_footer .thumb_up a div:active{
+	color: green;
+}
+
+.coupon_footer .thumb_down a:hover,
+.coupon_footer .thumb_down a:active{
+	color:red;
+}
+.coupon_footer .thumb_down{
+    border-right: none;
+    border-left: none;
+	
+}
+.coupon_footer .thumb_down a div{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -871px !important;
+    height: 20px;
+    width: 20px;
+}
+.coupon_footer .success{
+	font-size: 9px;
+	height:35px;
+	border:1px solid rgba(128,128,128,0.43);
+	padding: 0px;
+	width:47px;
+	text-align: center;
+	float: left;
+	color: #333;
+}
+.coupon_footer .success span{
+	font-size: 14px;
+}
+.coupon_footer .comment{
+	float: left;
+	height:20px;
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 25px;
+    background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -850px!important;
+}
+.coupon_footer .comment:hover{
+	color: orange;
+	cursor: pointer;
+}
+.add_comment{
+	width:100%;
+	clear: both;
+	text-align: center;
+	display: none;
+}
+.add_comment a{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -1107px;
+    width: 18px;
+    height: 18px;
+    padding-left: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
 /* Coopons Page End */
+
+/* Comment Form Start */
+.comment_wrap{
+	clear:both;
+	/*float: left;*/
+	width:77%;
+}
+/* Comment Form End */
+
