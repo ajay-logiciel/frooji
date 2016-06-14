@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/', function(){
+	// dd('A');
+	$fmtc = App::make('Frooji\Feeds\Providers\Fmtc');
+	$fmtc->getFeed();
+});
+
 Route::group(array('middleware' => 'auth'), function() {
 	Route::group(array('prefix' => 'admin'), function() {
 		// Route::get('/',['uses' => 'dashboard' as ]);
