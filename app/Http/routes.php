@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
