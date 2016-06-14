@@ -35,17 +35,9 @@ class ProductsController extends Controller
         if(!$is_featured) {
             $is_featured = false;
         }
-        // dd($is_active);
-        /*$validator = Validator::make($inputs, ['is_active' => 'required']);
-    
-        if( $validator->fails() ) {
-            
-            dd('rfg');
-        }*/
         $product = Products::findOrFail($id);
         $product->is_featured = $is_featured;
         $product->save();
-
-        return $this->index();
+        return redirect()->back();
     }
 }
