@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.master')
 
 @section('content')
 <!-- Top Categories Start-->

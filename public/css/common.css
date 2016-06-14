@@ -384,3 +384,94 @@ footer .footer_bottom .share{
 	height:50px;
 }
 /* Favourites Page End */
+
+/* Coopons Page Start */
+
+.coupon{
+	padding: 10px;
+}
+.coupon .company_name{
+	margin-bottom: 0px;
+}
+.coupon .company_name a{
+	color: #565656;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial;
+
+}
+.store_holder{
+	float: left;
+    width: 90px;
+}
+.store_holder a img{
+    width: 80px;
+    background-color: #fff;
+    pointer-events: none;
+}
+.frooji_label{
+	width:80px;
+	text-align: center;
+    font-size: 14px;
+    float:left;
+    font-family: arial;
+    font-weight: 700!important;
+    color: #fff;
+    background-color: #CC621B;
+    pointer-events: none;
+    border-top:1px solid #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.coupon_title{
+	float: left;
+}
+.coupon_title h3{
+	margin-top:0px;
+}
+.coupon_title h3 a{
+	text-decoration: none;
+	font-size: 20px!important;
+    font-family: arial;
+    color: #000;
+    font-weight: 400;
+}
+
+.use_coupon a{
+	float: right;
+	height:33px;
+	border:1px solid;
+	border-radius: 10px;
+	padding: 7px 10px;
+	font-size: 13px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #1c62ba;
+	font-weight: bold;
+}
+.use_coupon a:hover,
+.use_coupon a:active{
+    color: #fff;
+	background: #1c62ba;
+}
+.coupon .deal_star img{
+	margin-top: -5px;
+}
+
+.coupon .deal_star{
+	margin-left: 8px;
+}
+
+.coupon .deal_exp{
+	float: right;
+	padding-top: 2px;
+	font-size: 12px;
+}.coupon_views{
+	float: right;
+	font-size: 12px;
+	padding-top: 2px;
+	margin-right: 15px;
+	padding-left: 20px;
+	background: url(http://frooji.com/wp-content/themes/coups/images/chart-bar.png) no-repeat scroll 0 1px transparent;
+}
+/* Coopons Page End */

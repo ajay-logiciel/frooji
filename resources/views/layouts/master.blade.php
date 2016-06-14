@@ -17,10 +17,10 @@
     {!! Html::style('css/common.css') !!}
 </head>
 <body id="app-layout">
-    @include('shared.header')
+    @include('partials.header')
 
     @yield('content')
 
-    @include('shared.footer')
+    @include('partials.footer')
 </body>
 </html>

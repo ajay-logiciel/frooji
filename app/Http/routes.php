@@ -25,16 +25,23 @@ Route::group(array('middleware' => 'auth'), function() {
 	
 });
 Route::get('/', function () {
-   	return view('user.home');
+   	return view('home');
 });
+
 Route::get('/stores', function () {
-   	return view('user.stores');
+   	return view('stores');
 });
+
 Route::get('/categories', function () {
-   	return view('user.categories');
+   	return view('categories');
 });
+
+Route::get('/categories/{category}', function () {
+   	return view('coupons');
+});
+
 Route::get('/favorites', function () {
-   	return view('user.favorites');
+   	return view('favorites');
 });
 
 Route::auth();
