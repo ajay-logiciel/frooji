@@ -47,3 +47,6 @@ Route::get('/favorites', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+// Get all deals and save into D.B.
+Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
