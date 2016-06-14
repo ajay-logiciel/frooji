@@ -32,13 +32,13 @@
 					<a href="/">Home</a>
 				</li>
 				<li>
-					<a href="/">My favourites</a>
+					<a href="/favorites">My favourites</a>
 				</li>
 				<li>
-					<a href="">Categories</a>
+					<a href="/categories">Categories</a>
 				</li>
 				<li>
-					<a href="">Stores</a>
+					<a href="/stores">Stores</a>
 				</li>
 			</ul>
 		</div>
