@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<?php $array = ['#','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] ?>
 <!-- Stores Start -->
 <div style="width:100%">
 	<h3 style="text-align:center;width:76%;text-align:center;float:left;padding-top:30px;">

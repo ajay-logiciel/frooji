@@ -31,7 +31,7 @@
 		</div>
 		<div class="store_right">
 			<div class="subcription">
-				<h2>Frooji Coupon Subscription</h2>
+				<h2>Couponlandmark Coupon Subscription</h2>
 				<div>
 					Email Adress<br>
 					<input type="text" name="">
