@@ -32,6 +32,6 @@ class DashboardRepository extends AppRepository
 		$merchants = Merchant::whereActive()
 			                 ->limit(12)
 			                 ->get();
-		return $merchants
+		return $merchants;
 	}
 }
