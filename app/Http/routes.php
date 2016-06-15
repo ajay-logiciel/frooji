@@ -52,13 +52,13 @@ Route::get('/favorites', function () {
    	return view('favorites');
 });
 
-<<<<<<< HEAD
+
 Route::get('/home', 'HomeController@index');
-=======
+
 Route::auth();
 
 //	Route::get('/home', 'HomeController@index');
->>>>>>> refs/remotes/origin/develop
+
 
 /* End User Routes */
 
