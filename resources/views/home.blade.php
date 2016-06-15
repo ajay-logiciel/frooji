@@ -10,21 +10,11 @@
 			$cat_images = \Config::get('frooji.category_images');
 		?>
 		@foreach($categories as $category)
-			<a class="col-md-4">
+			<a href="{{ route('get.dashboard', ['s' => $category->slug]) }}" class="col-md-4">
 				<img class="image-responsive" src="{{$category->getImage()}}">
 				<div>{{ $category->name }}</div>
 			</a>
 		@endforeach
-
-		<!-- http://frooji.com/wp-content/uploads/2016/05/ima0007.jpg" -->
-		<!-- <a class="col-md-4">
-			<img class="image-responsive" src="http://frooji.com/wp-content/uploads/2016/05/ima0006.jpg"/>
-			<div>Jewelry</div>
-		</a>
-		<a class="col-md-4">
-			<img class="image-responsive" src="http://frooji.com/wp-content/uploads/2016/05/heatlth3.jpg"/>
-			<div>Health and Beauty</div>
-		</a> -->
 	</div>
 </div>
 <!-- Top Categories End-->
@@ -32,12 +22,12 @@
 <!-- Top Stores Start-->
 <div class="top_stores">
 	<h2>Top Stores</h2>
-	@foreach($merchants as $merchant)
+	@foreach($stores as $store)
 		<div class="stores">
-			<a class="col-md-3">
-				<img class="image-responsive" src="{{$merchant->getImage()}}"/>
+			<a href="{{ route('store.coupons', [$store->slug]) }}" class="col-md-3">
+				<img class="image-responsive" src="{{$store->getImage()}}"/>
 				<br>
-				<span>2 Coupons</span>
+				<span>{{ $store->products->count() }}</span>
 			</a>
 		</div>
 	@endforeach

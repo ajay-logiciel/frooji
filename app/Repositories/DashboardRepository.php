@@ -13,25 +13,46 @@ use DB;
 
 class DashboardRepository extends AppRepository
 {
-	public function getCategories()
+	public function getCategories($limit=null, $request = null)
 	{
-		/*$categories = Category::with(['products' => function($query) {
-									$query->where('')
-							  }])*/
-							 
-		$categories = Category::whereActive()
+		$builder = Category::with(['products' => function($query) use($request) {
+									$query->where('coupon_code', '!=', '');
+							    }])
+							  ->whereActive()
 							  ->whereFeatured()
-		                      ->limit(3)
-		                      ->get();
+		                      ->limit(3);
+		
+		if($request && $request->has('s')) {
+			$builder = $builder->where('slug', $request->get('s'));
+		}
 
-		return $categories;
+		if($limit) {
+			$builder = $builder->limit($limit);
+		}
+
+		return $builder->get();
 	}
 
-	public function getMerchants()
+	/**
+	 * Get stores with its related products
+	 *
+	 * @access public
+	 * @return Collections
+	 */
+	public function getStores($limit=null, $store=null)
 	{
-		$merchants = Merchant::whereActive()
-			                 ->limit(12)
-			                 ->get();
-		return $merchants;
+		$builder = Merchant::with(['products'])
+							 ->whereActive();
+			                 //->limit(12);
+			                 //->get();
+        if($store) {
+        	$builder = $builder->where('slug', $store);
+        }
+
+        if($limit) {
+			$builder = $builder->limit($limit);
+		}
+				
+		return $builder->get();
 	}
 }

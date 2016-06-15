@@ -13,9 +13,18 @@ class Merchant extends Model
     public $timestamps = false;
 
     /**
+     * Assign merchant
+     */
+    public function products()
+    {
+        return $this->hasMany('App\Product', 'merchant_id', 'id');
+    }
+
+    /**
 	 * Get active categories.
 	 */
-	public static function scopeWhereActive($query) {
+	public static function scopeWhereActive($query)
+	{
         return $query->where('status', true);
     }
 

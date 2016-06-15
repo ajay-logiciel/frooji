@@ -28,4 +28,12 @@ class Product extends Model
     {
        	return $this->belongsToMany('App\Category', 'categories_products', 'product_id','category_id');
     }
+
+    /**
+     * Assign merchant
+     */
+    public function merchant()
+    {
+        return $this->hasOne('App\Merchant',  'merchant_id', 'id');
+    }
 }

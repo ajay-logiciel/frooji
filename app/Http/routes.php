@@ -25,7 +25,14 @@ Route::group(array('middleware' => 'auth'), function() {
 	
 });
 
-Route::get('/home', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
+Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
+
+Route::group(array('prefix' => 'store'), function() {
+
+	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getStoreCoupon']);
+
+});
+//Route::get('/home', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
 
 Route::get('/stores', function () {
    	return view('stores');
