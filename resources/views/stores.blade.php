@@ -32,20 +32,17 @@
 		<div class="store_right">
 			<div class="subcription">
 				<h2>Couponlandmark Coupon Subscription</h2>
-				<div>
+				<p>
 					Email Adress<br>
 					<input type="text" name="">
-				</div>
-				<div>
+				</p>
+				<p>
 					First Name<br>
 					<input type="text" name="">
-				</div>
-				<div>
-					
-				</div>
-				<div>
+				</p>
+				<p>
 					<button type="submit">SUBMIT</button>
-				</div>
+				</p>
 			</div>
 		</div>
 	</div>
