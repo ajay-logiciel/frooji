@@ -33,8 +33,8 @@ class Merchant extends Model
      */
     public function getImage()
     {
-        $base_path = "/images/stores";
-        $image = $base_path .'/'.$this->image;
+        $store_base_path = \Config::get('frooji.store_image_base_path'); 
+        $image = $store_base_path .'/'.$this->image;
 
         return $image;
     }

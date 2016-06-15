@@ -57,15 +57,18 @@ class ProductsController extends Controller
     }
 
     /**
-     * Get Store's coupon contents
+     * Get Store and its all coupons using store's slug.
      *
      * @access public
      * @param category:string
      * @return View
      */
-    public function getStoreCoupon($store)
+    public function getStoreBySlug($slug)
     {
-        $stores = $this->dasboardRepo->getCategories($store);
-        return view('coupons');
+        $store = $this->dasboardRepo->getStoreBySlug($slug);
+
+        return View::make('coupons', [
+            'store' => $store
+        ]);
     }
 }

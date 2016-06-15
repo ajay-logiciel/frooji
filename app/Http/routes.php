@@ -29,7 +29,7 @@ Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashb
 
 Route::group(array('prefix' => 'store'), function() {
 
-	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getStoreCoupon']);
+	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getStoreBySlug']);
 
 });
 //Route::get('/home', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);

@@ -6,5 +6,7 @@ return [
 	'dashboard' => [
 		'category_limit'  => 3,
 		'store_limit'	  => 12,
-	]
+	],
+	'store_image_base_path' => "/images/stores",
+	'category_image_base_path' => "/images/categories"
 ];

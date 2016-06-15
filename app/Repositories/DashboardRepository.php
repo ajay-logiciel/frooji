@@ -55,4 +55,20 @@ class DashboardRepository extends AppRepository
 				
 		return $builder->get();
 	}
+
+	/**
+	 * Get stores with its related products
+	 *
+	 * @access public
+	 * @return Collections
+	 */
+	public function getStoreBySlug($slug)
+	{
+		$store =  Merchant::with(['products'])
+							->where('slug', $slug)
+							->whereActive()
+			                ->first();
+				
+		return $store;
+	}
 }

@@ -33,6 +33,26 @@ class Product extends Model
      */
     public function merchant()
     {
-        return $this->hasOne('App\Merchant',  'merchant_id', 'id');
+        return $this->hasOne('App\Merchant', 'id', 'merchant_id');
+    }
+
+    /**
+     * Get coupon image
+     */
+    public function getCouponImage()
+    {
+        $store_base_path = \Config::get('frooji.store_image_base_path');
+        
+        // If product image exist the return product image
+        if($this->image) {
+           return $this->image;
+        }
+
+        // If product image not exist then display store logo.
+        $image = $store_base_path .'/'.$this->merchant->image;
+        return $image;
+
+
+        // If store loog not exist then display store url capture. 
     }
 }
