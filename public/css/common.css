@@ -386,12 +386,29 @@ footer .footer_bottom .share{
 /* Favourites Page End */
 
 /* Coopons Page Start */
+.store_top_image{
+    box-shadow: 0 5px 5px #d7d7d7 !important;
+    -webkit-box-shadow: 0 5px 5px #d7d7d7 !important;
+    text-align: center;
+    max-height: 186px!important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(89,89,89,0.08);
+    background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right,#d7d7d7, #d7d7d7, #fff, #fff, #d7d7d7, #d7d7d7); /* Standard syntax */
+}
+.store_top_image a img{
+}
 .coupon_left{
 	width:100%;
 	clear:both;
 }
 .coupon{
-	padding: 10px;
+	padding: 10px 10px 10px 0;
     border: 1px solid #ADA8A5;
     background: #fff;
 	width: 77%;
@@ -491,6 +508,7 @@ footer .footer_bottom .share{
 
 .coupon_footer{
 	float: left;
+	padding-left: 10px;
 	margin-top: 10px;
 }
 .thumb_up,
