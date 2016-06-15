@@ -11,19 +11,25 @@
 |
 */
 
+/* Start Admin Routes */
 Route::group(array('middleware' => 'auth'), function() {
+
 	Route::group(array('prefix' => 'admin'), function() {
-		// Route::get('/',['uses' => 'dashboard' as ]);
+
 		Route::get('/',[ 'as' => 'admin', 'uses' => 'Admin\FeedSettingsController@index' ]);
+		
 		Route::get('/feed_settings',[ 'as' => 'feed_settings', 'uses' => 'Admin\FeedSettingsController@index' ]);
+		
 		Route::put('/feed_settings/activation/{id?}',[ 'as' => 'feed_settings_activation', 'uses' => 'Admin\FeedSettingsController@activation' ]);
 
 		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
+		
 		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
-
 	});
-	
 });
+/* End Admin Routes */
+
+/* Start User Routes*/
 Route::get('/', function () {
    	return view('home');
 });
@@ -44,9 +50,11 @@ Route::get('/favorites', function () {
    	return view('favorites');
 });
 
-Route::auth();
-
 Route::get('/home', 'HomeController@index');
+
+/* End User Routes */
+
+Route::auth();
 
 // Get all deals and save into D.B.
 Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
