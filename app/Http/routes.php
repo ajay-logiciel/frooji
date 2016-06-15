@@ -30,11 +30,11 @@ Route::group(array('middleware' => 'auth'), function() {
 /* End Admin Routes */
 
 /* Start User Routes*/
-Route::get('/', function () {
+/*Route::get('/', function () {
    	return view('home');
-});
+});*/
 
-Route::get('/home', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
+Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
 
 Route::get('/stores', function () {
    	return view('stores');
@@ -53,7 +53,7 @@ Route::get('/favorites', function () {
 });
 
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 Route::auth();
 
