@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterProductsAddIsFeaturedFielf extends Migration
+class AlterProductsAddIsFeaturedField extends Migration
 {
     /**
      * Run the migrations.

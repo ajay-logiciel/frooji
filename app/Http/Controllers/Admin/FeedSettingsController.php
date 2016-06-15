@@ -28,7 +28,6 @@ class FeedSettingsController extends Controller
 		if(!$isActive) {
 			$isActive = false;
 		}
-		
 		$feed = FeedSettings::findOrFail($id);
 		$feed->is_active = $isActive;
 		$feed->save();

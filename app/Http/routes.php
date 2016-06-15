@@ -34,6 +34,8 @@ Route::get('/', function () {
    	return view('home');
 });
 
+Route::get('/home', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
+
 Route::get('/stores', function () {
    	return view('stores');
 });
@@ -50,7 +52,13 @@ Route::get('/favorites', function () {
    	return view('favorites');
 });
 
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index');
+=======
+Route::auth();
+
+//	Route::get('/home', 'HomeController@index');
+>>>>>>> refs/remotes/origin/develop
 
 /* End User Routes */
 
@@ -58,3 +66,4 @@ Route::auth();
 
 // Get all deals and save into D.B.
 Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
+/*Route::get('/get-deals', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);*/
