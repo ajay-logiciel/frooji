@@ -18,10 +18,10 @@
 				<ul>
 				<?php for($i = 1; $i <= 10; $i++) {?>
 					<li>
-						<a>Geh sdf sdgf fgs</a>
+						<a href="/categories/category">Geh sdf sdgf fgs</a>
 					</li>
 					<li>
-						<a>jhykw mGeh sdf sdgf fgs</a>
+						<a href="/categories/category">jhykw mGeh sdf sdgf fgs</a>
 					</li>
 				<?php } ?>
 				</ul>

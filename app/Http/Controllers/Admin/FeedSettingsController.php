@@ -23,19 +23,11 @@ class FeedSettingsController extends Controller
 		if(!$is_active) {
 			$is_active = false;
 		}
-		// dd($is_active);
-		/*$validator = Validator::make($inputs, ['is_active' => 'required']);
-	
-		if( $validator->fails() ) {
-			
-			dd('rfg');
-		}*/
+
 		$feed = FeedSettings::findOrFail($id);
 		$feed->is_active = $is_active;
 		$feed->save();
-		
-		$feeds = FeedSettings::get();
 
-		return view('admin.feed_settings', ['feeds' => $feeds]);
+		return redirect()->back();
 	}
 }
