@@ -5,13 +5,17 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Presenters\ProductPresenter;
+use Caffeinated\Presenter\Traits\PresentableTrait;
 
 class Product extends Model
 {
+    use PresentableTrait;
 
     const FEED =  "Feed";
 
-    
+    protected $presenter = ProductPresenter::class;
+
     /**
      * Assign tag to content.
      */
@@ -41,7 +45,7 @@ class Product extends Model
      */
     public function getCouponImage()
     {
-        $store_base_path = \Config::get('frooji.store_image_base_path');
+        $store_base_path = \Config::get('globalconfig.store_image_base_path');
         
         // If product image exist the return product image
         if($this->image) {

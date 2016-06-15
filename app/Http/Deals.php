@@ -7,7 +7,7 @@ class Deals
 {
 	public function getDeals($value='')
 	{
-		$path = Config::get('frooji.ftmc_deal_path');
+		$path = Config::get('globalconfig.ftmc_deal_path');
     	$ch = curl_init();
 
 		curl_setopt($ch, CURLOPT_URL, $path);

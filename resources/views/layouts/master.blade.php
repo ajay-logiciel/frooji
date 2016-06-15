@@ -15,8 +15,17 @@
 
     <!-- Fonts -->
     {!! Html::style('css/common.css') !!}
+
+    {!! HTML::script('js/jquery.min.js') !!}
+
+    <script type="text/javascript">
+        var Frooji = {}
+    </script>
+
 </head>
 <body id="app-layout">
+    @include('partials.js-scripts')
+
     @include('partials.header')
 
     @yield('content')
