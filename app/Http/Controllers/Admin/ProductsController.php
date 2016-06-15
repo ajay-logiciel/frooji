@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Validator;
 use App\Http\Controllers\Controller;
 use App\Models\Products;
 
@@ -13,10 +12,8 @@ class ProductsController extends Controller
     protected $repository;
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    * Dispaly all products (Coupons)
+    */
     public function index()
     {
         $products = Products::orderby('created_at', 'desc')->paginate(5);
@@ -24,15 +21,19 @@ class ProductsController extends Controller
         return view('admin.coupon_settings', ['products' => $products]);
     }
 
+    /**
+    * set / unset featured products (Coupons)
+    */
     public function featured($id, Request $request)
     {
-        $is_featured = (bool)$request->input('is_featured');
-        if(!$is_featured) {
-            $is_featured = false;
+        $isFeatured = (bool)$request->input('is_featured');
+        if(!$isFeatured) {
+            $isFeatured = false;
         }
         $product = Products::findOrFail($id);
-        $product->is_featured = $is_featured;
+        $product->is_featured = $isFeatured;
         $product->save();
+        
         return redirect()->back();
     }
 }
