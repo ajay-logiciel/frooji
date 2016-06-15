@@ -1,8 +1,9 @@
-a:hover,a:active,a:focus{
-	cursor: pointer;
-	text-decoration: none;
+a,
+a:hover,
+a:active,
+a:focus{
+	text-decoration: none ;
 }
-
 *{
 	margin:0px auto;
 	padding:0px auto;
@@ -325,7 +326,6 @@ footer .footer_bottom .share{
 }
 .subcription h2{
 	width: 100%;
-	height: 40px;
 	color: #333;
 	text-transform: capitalize;
     font-size: 18px;
@@ -333,11 +333,11 @@ footer .footer_bottom .share{
     margin: 0;
     padding: 10px 12px;
 }
-.subcription div{
+.subcription p{
 	padding: 10px;
 	font-size: 14px;
 }
-.subcription div input{
+.subcription p input{
 	width: 100%;
 	height: 30px;
 	padding: .5278em;

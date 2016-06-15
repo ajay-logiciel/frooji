@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<?php $array = ['#','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] ?>
 <!-- Stores Start -->
 <div style="width:100%">
 	<h3 style="text-align:center;width:76%;text-align:center;float:left;padding-top:30px;">
@@ -95,19 +94,17 @@
 <div class="store_right">
 	<div class="subcription">
 		<h2>Frooji Coupon Subscription</h2>
-		<div>
+		<p>
 			Email Adress<br>
 			<input type="text" name="">
-		</div>
-		<div>
+		</p>
+		<p>
 			First Name<br>
 			<input type="text" name="">
-		</div>
-		<div>
-		</div>
-		<div>
+		</p>
+		<p>
 			<button type="submit">SUBMIT</button>
-		</div>
+		</p>
 	</div>
 </div>
 <!-- Stores End -->
