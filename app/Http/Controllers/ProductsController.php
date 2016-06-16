@@ -73,12 +73,15 @@ class ProductsController extends Controller
      * @param category:string
      * @return View
      */
-    public function getStoreBySlug($slug)
+    public function getProductsByStoreSlug($slug)
     {
-        $store = $this->dasboardRepo->getStoreBySlug($slug);
+        $products = $this->dasboardRepo->getAllProductOfSlug($slug);
+        $firstProduct = $products->first(); 
+        $store_image = $firstProduct->getStoreImage();
 
         return View::make('coupons', [
-            'store' => $store
+            'products' => $products,
+            'store_image' => $store_image
         ]);
     }
 
@@ -89,17 +92,17 @@ class ProductsController extends Controller
      * @param Illuminate\Http\Request;
      * @return View
      */
-    public function searchByCategory(Request $request)
+    public function getProductsByCategorySlug(Request $request)
     {
         if(!$request->has('s')) {
             return Redirect::route('get.dashboard');
         }
 
         $slug = $request->get('s');
-        $category = $this->dasboardRepo->getCategoryBySlug($slug);
+        $products = $this->dasboardRepo->getAllProductsOfCategory($slug);
 
         return View::make('search', [
-                'category' => $category
+                'products' => $products
             ]);
     }
 

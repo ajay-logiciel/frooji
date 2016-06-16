@@ -1,7 +1,7 @@
 <div class="coupon">
 	<p class="company_name col-sm-12">
-		<a href="{{ route('store.coupons', [$catOrMerchant->slug]) }}">
-			{{ $catOrMerchant->name }}
+		<a href="{{ route('store.coupons', [$product->slug]) }}">
+			{{ $product->name }}
 		</a>
 	</p>
 	<div class="store_holder col-sm-2">
@@ -54,3 +54,4 @@
 		<a href="">Add Comment</a>
 	</div> -->
 </div>
+	

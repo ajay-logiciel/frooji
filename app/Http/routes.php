@@ -34,14 +34,14 @@ Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashb
 
 Route::group(['prefix' => 'products'], function () {
 	
-	Route::get('/', ['as' => 'get.product.coupons', 'uses' => 'ProductsController@searchByCategory']);
+	Route::get('/', ['as' => 'get.product.coupons', 'uses' => 'ProductsController@getProductsByCategorySlug']);
 
 	Route::get('/get-coupon-popup/{id}', ['as' => 'get.usecoupon.popup', 'uses' => 'ProductsController@getCouponPopup']);
 });
 
 Route::group(array('prefix' => 'store'), function() {
 
-	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getStoreBySlug']);
+	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getProductsByStoreSlug']);
 
 });
 

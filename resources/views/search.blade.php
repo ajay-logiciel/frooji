@@ -10,10 +10,11 @@
 </div>
 <div class="coupon_left">
 
-	@foreach($category->products as $product)
-		@include('partials.coupon-listing', ['product' => $product , 'catOrMerchant' => $category])
+	@foreach($products as $product)
+		@include('partials.coupon-listing', ['product' => $product])
 	@endforeach
 
+	{{$products->links()}}
 </div>
 <div class="store_right">
 	<div class="subcription">
