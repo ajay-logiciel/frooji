@@ -104,6 +104,8 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        return View::make('coupon-popup');
+        return View::make('coupon-popup', [
+                'product'   => $product
+            ]);
     }
 }

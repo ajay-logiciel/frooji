@@ -16,15 +16,20 @@ class ProductPresenter extends Presenter
 	 */
 	public function coupon()
 	{
-		$class="use-coupon-link";
-		$text="USE COUPON";
+		$id = $this->entity->id;
+		$direct_url = $this->entity->direct_url;
 		if(empty($this->entity->coupon_code)) {
 			
 			$class="get-deal-link";
 			$text="GET DEALS";
-		} 
 
-		$link = "<a href='".$this->entity->direct_url."' data-id='".$this->entity->id."' class='".$class."' target='_blank'>$text</a>";
+			$link = "<a href='".$direct_url."' data-id='".$id."' class='".$class."' target='_blank'>$text</a>";
+		} else {
+			$class="use-coupon-link";
+			$text="USE COUPON";
+			
+			$link = "<a href='".route('get.usecoupon.popup', ['id' => $id])."' class='".$class."' data-toggle='modal' data-target='#mediumPopup'>$text</a>";
+		}
 
 		return $link;
 	}

@@ -1,6 +1,6 @@
 $(function() {
 
-	$('.coupon').on('click', '.use-coupon-link', function(e) {
+	/*$('.coupon').on('click', '.use-coupon-link', function(e) {
 		e.preventDefault();
 
 		var $this = $(this);
@@ -28,7 +28,7 @@ $(function() {
 		$promise.always(function(response) {
 			//$table_wrapper.find('.full-screen-loader').hide();
 		});
-	});
+	});*/
 
 });
 

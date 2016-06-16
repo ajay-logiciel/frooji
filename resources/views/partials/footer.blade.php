@@ -36,3 +36,7 @@
 	
     <!-- Add custom js script -->
     @yield('scripts')
+
+    @include('partials.large-popup')
+    @include('partials.medium-popup')
+    @include('partials.small-popup')
