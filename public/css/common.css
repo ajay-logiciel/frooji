@@ -1,0 +1,628 @@
+a,
+a:hover,
+a:active,
+a:focus{
+	text-decoration: none ;
+}
+*{
+	margin:0px auto;
+	padding:0px auto;
+}
+.row{
+	margin: 0px;
+}
+body{
+	background: #eee;
+}
+#wrapper{
+	width: 100%;
+}
+#top_nav{
+	background: #b94a00;
+    color: #fff;
+    height:40px;
+}
+header{
+	padding: 10px;
+	padding-bottom: 0px;
+    border-bottom: 5px solid rgba(185,74,0,0.18);
+}
+#logo {
+    
+    float: left;
+    overflow: hidden;
+    padding: 15px 0 0 0;
+}
+#logo a{
+	display: block;
+}
+.search{
+	width: 100%;
+	border: 0.5px solid #f1f1f1;
+	margin-top: 20px
+}
+
+.search .search_box{
+	width: 75%;
+	height:45px;
+	font-size: 22px;
+
+}
+.search .search_btn{
+    width: 25%;
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 9px 6px;
+    background: #ba3107;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ba3107),to(#d49331));
+    background: -moz-linear-gradient(top,#ba3107,#d49331);
+    background: linear-gradient(to bottom,#ba3107,#d49331);
+    font: normal normal normal 20px arial;
+    color: #fff;
+    text-decoration: none;
+    border-bottom-right-radius: 1px;
+    border-top-right-radius: 1px;
+    float: right!important;
+    margin-top: -1px;
+}
+.menu{
+	clear:both;
+	margin-top:-10px;
+}
+.menu ul li a{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 16px;
+	color: #000;
+}
+.navbar{
+	min-height: 40px;
+}
+
+
+
+/* Footer */
+footer{
+	color:#d3d3d3;
+	clear: both;
+}
+footer .footer_up{
+    background: #cc621b;
+    height:60px;
+    font-size: 14px;
+    padding: 10px 0;
+}
+footer a{
+	color: #d3d3d3;
+}
+footer .footer_bottom{
+    background: #b94a00;
+    height:50px;
+    font-size: 11px;
+    padding-top: 15px;
+    padding-left:15px;
+}
+footer .footer_bottom .copy_right{
+
+}
+footer .footer_bottom .share{
+	color:#d3d3d3;
+	float:right;
+    padding-top: 1px;	
+    padding-right:50px;
+}
+
+/* Home */
+
+.top_cat{
+	text-align: center;
+}
+
+.top_cat h2{
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+.cats{
+	width: 90%;	
+}
+.cats a{
+	width:33%;
+	font-size: 24px;
+	color: #fff;
+
+}
+.cats img{
+	width: 100%;
+	height:250px;
+	z-index:auto !important;
+}
+.cats a div{
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%)!important;
+	margin-top:-35px;
+	z-index:1 !important;	
+}
+
+.top_stores{
+	text-align: center;
+	margin: 0px auto;
+}
+.top_stores{
+	clear: both;
+	padding-top: 40px;
+}
+
+.stores{
+	width: 90%;	
+}
+.stores a{
+	width:23%;
+	margin-right: 1%;
+	margin-left: 1%;
+	padding-top: 30px;	
+	padding-bottom: 2px;	
+	background: #fff;
+	margin-bottom: 20px;
+	color: #000;
+	font-size: 14px;
+}
+.stores img{
+	overflow: hidden;
+	width: 50%;
+	height:60px;
+	margin-bottom: 10px;
+}
+.featured_deals{
+	padding-top: 20px;
+	text-align: center;
+	clear: both;
+	width: 90%;
+	margin: 0px auto;
+}
+.f_deal{
+	float: left;
+	width: 100%;
+	border: 1px solid #d3d3d3;
+	padding: 3px 7px;
+	background: #fff;
+	margin-bottom: 20px !important;
+}
+.deal_top{
+	float: left;
+	width: 100%;
+}
+.deal_top .best_buy{
+	float: left;
+	color: rgba(100,104,101,0.78);
+}
+.deal_top .best_buy:hover,
+.deal_top .best_buy:focus,
+.deal_top .best_buy:active{
+    color: #565656;
+}
+.deal_top .deal_star{
+	float: right;
+}
+.deal_img{
+	clear: both;
+	padding-top: 20px;
+	height:150px !important;
+	width: 100%;
+	display: block;
+}
+
+.deal_image img{
+	float: left;
+}
+.deal_text a{
+	text-align: center;
+	width: 100%;
+	height:60px !important;
+	color: #565656;;
+	font-size: 18px;
+	float: left;
+}
+.get_deal a{
+	clear: both;
+	float: right;
+	height:30px;
+	border:1px solid;
+	border-radius: 10px;
+	padding: 7px 10px;
+	font-size: 11px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #1c62ba;;
+}
+.deal_exp{
+	clear: both;
+	float: right;
+
+}
+
+/* Stores Page Start*/
+
+#store_wrap{
+	width: 100%;
+	margin-top: 30px;
+}
+.store_left{
+	background: #fff;
+	padding-top: 30px;
+	padding-left: 10px;
+	width: 77%;
+	float: left;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+	
+.store_left{
+
+}
+.store_index{
+	width: 100%;
+}
+.store_index a{
+	float: left;
+    background: #F87308!important;
+    border-radius: 4px;
+    color: #fff!important;
+    border: 1px solid #DDD;
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    margin: 5px 0 0;
+    margin-right: 2px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.store_name_wrap{
+	width: 100%;
+	clear: both;
+	padding-top:20px;
+}
+.store_name_index{
+	width: 100%;
+	border-bottom :1px solid #ebebeb;
+	font-size: 20px;
+	font-weight:bold;
+	height:30px;
+	margin-top: 30px;
+	clear: both;
+}
+.store_name{
+	padding-top: 10px;
+	width: 100%;
+}
+.store_name ul{
+	color: #565656;
+	list-style: none;
+	margin: 0 0 35px!important;
+	padding:0px;
+	float: left;
+}
+.store_name ul li{
+	background: url(http://frooji.com/wp-content/themes/coups/images/store.png) no-repeat scroll 3px center transparent;
+    float: left;
+    list-style: none outside none;
+    padding: 8px 15px 8px 22px;
+    width: auto;
+    min-width: 200px;
+}
+.store_name ul li a{
+	color: #565656;
+    text-decoration: none;
+}
+.store_right{
+	width: 23%;
+	float: right;
+}
+.subcription{
+	border:1px solid #bfbfbf;
+	background: #fff;
+	width:100%;
+	margin-bottom: 	20px;
+}
+.subcription h2{
+	width: 100%;
+	color: #333;
+	text-transform: capitalize;
+    font-size: 18px;
+    background: rgba(28,98,186,0.28);
+    margin: 0;
+    padding: 10px 12px;
+}
+.subcription p{
+	padding: 10px;
+	font-size: 14px;
+}
+.subcription p input{
+	width: 100%;
+	height: 30px;
+	padding: .5278em;
+    background-color: #F1F1F1;
+    border: 2px solid rgba(51,51,51,.1);
+    -moz-box-sizing: border-box;
+    margin-bottom: 8px;
+
+}
+
+.subcription button{
+	width: 100%;
+	height: 40px;
+	background: #F87308;
+	border: 1px solid #F87308;
+	color: #fff;
+	font-weight: bold;
+}
+/* Stores Page End*/
+
+/* Categories Page Start */
+.category_name ul li{
+	background: none;
+}
+/* Categories Page End */
+
+
+/* Favourites Page Start */
+.no_favorites{
+	padding-bottom: 40px;
+	font-size: 14px;
+}
+.clear_favorites_btn{
+	color: #000;
+	text-decoration: none;
+	padding-left: 22px;
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -1012px!important;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    height: 18px;
+	/*background: url(http://frooji.com/wp-content/themes/coups/images/store.png) no-repeat scroll 3px center transparent;*/
+}
+.subcription_padding{
+	height:50px;
+}
+/* Favourites Page End */
+
+/* Coopons Page Start */
+.store_top_image{
+    box-shadow: 0 5px 5px #d7d7d7 !important;
+    -webkit-box-shadow: 0 5px 5px #d7d7d7 !important;
+    text-align: center;
+    max-height: 186px!important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(89,89,89,0.08);
+    background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right,#d7d7d7, #d7d7d7, #fff, #fff, #d7d7d7, #d7d7d7); /* Standard syntax */
+}
+.store_top_image a img{
+}
+.coupon_left{
+	width:100%;
+	clear:both;
+}
+.coupon{
+	padding: 10px 10px 10px 0;
+    border: 1px solid #ADA8A5;
+    background: #fff;
+	width: 77%;
+	float: left;
+	margin-bottom: 10px;
+	border-radius:10px;
+}
+.coupon .company_name{
+	margin-bottom: 0px;
+}
+.coupon .company_name a{
+	color: #565656;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial;
+
+}
+.store_holder{
+	float: left;
+    width: 90px;
+}
+.store_holder a img{
+    width: 80px;
+    background-color: #fff;
+    pointer-events: none;
+}
+.frooji_label{
+	width:80px;
+	text-align: center;
+    font-size: 14px;
+    float:left;
+    font-family: arial;
+    font-weight: 700!important;
+    color: #fff;
+    background-color: #CC621B;
+    pointer-events: none;
+    border-top:1px solid #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.coupon_title{
+	float: left;
+}
+.coupon_title h3{
+	margin-top:0px;
+}
+.coupon_title h3 a{
+	text-decoration: none;
+	font-size: 20px!important;
+    font-family: arial;
+    color: #000;
+    font-weight: 400;
+}
+
+.use_coupon a{
+	float: right;
+	height:33px;
+	border:1px solid;
+	border-radius: 3px;
+	padding: 7px 10px;
+	font-size: 13px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #1c62ba;
+	font-weight: bold;
+}
+.use_coupon a:hover,
+.use_coupon a:active{
+    color: #fff;
+	background: #1c62ba;
+}
+.coupon .deal_star img{
+	margin-top: -5px;
+}
+
+.coupon .deal_star{
+	margin-left: 8px;
+}
+
+.coupon .deal_exp{
+	float: right;
+	padding-top: 2px;
+	font-size: 12px;
+}
+.coupon_views{
+	float: right;
+	font-size: 12px;
+	padding-top: 2px;
+	margin-right: 15px;
+	padding-left: 20px;
+	background: url(http://frooji.com/wp-content/themes/coups/images/chart-bar.png) no-repeat scroll 0 1px transparent;
+}
+.deal_exp,
+.coupon_views{
+	margin-top: 20px;
+}
+
+.coupon_footer{
+	float: left;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+.thumb_up,
+.thumb_down{
+	width: 35px;
+	height: 35px;
+	padding: 6px;
+	float: left;
+	border:1px solid rgba(128,128,128,0.43);
+}
+.coupon_footer .thumb_up a div{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -934px !important;
+    height: 20px;
+    width: 20px;
+}
+.coupon_footer .thumb_up a div:hover,
+.coupon_footer .thumb_up a div:active{
+	color: green;
+}
+
+.coupon_footer .thumb_down a:hover,
+.coupon_footer .thumb_down a:active{
+	color:red;
+}
+.coupon_footer .thumb_down{
+    border-right: none;
+    border-left: none;
+	
+}
+.coupon_footer .thumb_down a div{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -871px !important;
+    height: 20px;
+    width: 20px;
+}
+.coupon_footer .success{
+	font-size: 9px;
+	height:35px;
+	border:1px solid rgba(128,128,128,0.43);
+	padding: 0px;
+	width:47px;
+	text-align: center;
+	float: left;
+	color: #333;
+}
+.coupon_footer .success span{
+	font-size: 14px;
+}
+.coupon_footer .comment{
+	float: left;
+	height:20px;
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 25px;
+    background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -850px!important;
+}
+.coupon_footer .comment:hover{
+	color: orange;
+	cursor: pointer;
+}
+.add_comment{
+	width:100%;
+	clear: both;
+	text-align: center;
+	display: none;
+}
+.add_comment a{
+	background: url(http://frooji.com/ima/froojisprt.png) no-repeat left -1107px;
+    width: 18px;
+    height: 18px;
+    padding-left: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
+/* Coopons Page End */
+
+/* Comment Form Start */
+.comment_wrap{
+	clear:both;
+	/*float: left;*/
+	width:77%;
+}
+.coupon-box-wrapper{
+	height: 115px;
+	border: 1px solid #f2f2f2;
+	background-color: #f2f2f2;
+}
+.coupon-input {
+	border-right: 0 none;
+	border-left: 0 none;
+	border-top: 0 none;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-ms-border-radius: 0px;
+	background-color: #ffffff !important;
+}
+.continue-store-box {
+	background-color: $ccc;
+	height: 50px;
+}
+.continue-store-box p {
+	padding-top: 10px;
+}
+.continue-store-box .continue-store-link
+{
+	padding: 3px;
+	margin: 8px 5px 5px 5px;
+}
+.coupon-box-wrapper .form-control:focus, .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control
+{
+	border-color: 0 none !important;
+    box-shadow: none !important;
+    outline: 0 none !important;
+}
+/* Comment Form End */
+
