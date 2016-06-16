@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\AppController;
 use App\Models\Products;
 
-class ProductsController extends Controller
+class ProductsController extends AppController
 {
     protected $repository;
 
