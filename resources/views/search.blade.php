@@ -5,20 +5,13 @@
 <!-- Stores Start -->
 <div style="width:100%">
 	<!-- Image -->
-	<div class="store_top_image">
-		<a href="#">
-			<img class="image-responsive" src="{{$store->getImage()}}"/>
-		</a>
-	</div>
-	<!-- Heading -->
-	<!-- <h3 style="text-align:center;width:76%;text-align:center;float:left;padding-top:30px;">
-		<img class="image-responsive" src="{{$store->getImage()}}"/>
-	</h3> -->
+	<div class="" style="height:100px;"></div>
+	
 </div>
 <div class="coupon_left">
 
-	@foreach($store->products as $product)
-		@include('partials.coupon-listing', ['product' => $product, 'catOrMerchant' => $store])
+	@foreach($category->products as $product)
+		@include('partials.coupon-listing', ['product' => $product , 'catOrMerchant' => $category])
 	@endforeach
 
 </div>

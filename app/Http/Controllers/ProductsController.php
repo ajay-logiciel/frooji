@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Repositories\ProductRepository;
 use App\Repositories\DashboardRepository;
+use App\Product;
 use View, Config;
 
 class ProductsController extends Controller
@@ -39,11 +40,17 @@ class ProductsController extends Controller
      */
     public function getDashboardContents(Request $request)
     {
-        $cat_limit = Config::get('frooji.dashboard.category_limit');
-        $store_limit = Config::get('frooji.dashboard.store_limit');;
+        $cat_limit = Config::get('globalconfig.dashboard.category_limit');
+        $store_limit = Config::get('globalconfig.dashboard.store_limit');;
 
         if($request->has('s')) {
-            $categories = $this->dasboardRepo->getCategories($cat_limit, $request);
+            $category = $this->dasboardRepo->getCategories($cat_limit, $request);
+
+            return View::make('search', 
+            [
+                'store' => $category->first(),
+            ]);
+
         }
 
         $categories = $this->dasboardRepo->getCategories($cat_limit);
@@ -70,5 +77,35 @@ class ProductsController extends Controller
         return View::make('coupons', [
             'store' => $store
         ]);
+    }
+
+    public function searchByCategory(Request $request)
+    {
+        if(!$request->has('s')) {
+            return Redirect::route('get.dashboard');
+        }
+
+        $slug = $request->get('s');
+        $category = $this->dasboardRepo->getCategoryBySlug($slug);
+
+        return View::make('search', [
+                'category' => $category
+            ]);
+    }
+
+    /**
+     * Get use coupon code popup
+     *
+     * @access public
+     * @param id:int
+     * @return View
+     */
+    public function getCouponPopup($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return View::make('coupon-popup', [
+                'product'   => $product
+            ]);
     }
 }

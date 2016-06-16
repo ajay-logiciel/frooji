@@ -591,5 +591,38 @@ footer .footer_bottom .share{
 	/*float: left;*/
 	width:77%;
 }
+.coupon-box-wrapper{
+	height: 115px;
+	border: 1px solid #f2f2f2;
+	background-color: #f2f2f2;
+}
+.coupon-input {
+	border-right: 0 none;
+	border-left: 0 none;
+	border-top: 0 none;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-ms-border-radius: 0px;
+	background-color: #ffffff !important;
+}
+.continue-store-box {
+	background-color: $ccc;
+	height: 50px;
+}
+.continue-store-box p {
+	padding-top: 10px;
+}
+.continue-store-box .continue-store-link
+{
+	padding: 3px;
+	margin: 8px 5px 5px 5px;
+}
+.coupon-box-wrapper .form-control:focus, .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control
+{
+	border-color: 0 none !important;
+    box-shadow: none !important;
+    outline: 0 none !important;
+}
 /* Comment Form End */
 

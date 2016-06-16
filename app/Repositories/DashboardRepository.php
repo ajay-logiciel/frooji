@@ -71,4 +71,14 @@ class DashboardRepository extends AppRepository
 				
 		return $store;
 	}
+
+	public function getCategoryBySlug($slug)
+	{
+		$category =  Category::with(['products'])
+							->where('slug', $slug)
+							->whereActive()
+			                ->first();
+	
+		return $category;
+	}
 }

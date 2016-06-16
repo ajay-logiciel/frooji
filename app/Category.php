@@ -37,7 +37,7 @@ class Category extends Model
      */
     public function getImage()
     {
-        $cat_base_path = \Config::get('frooji.category_image_base_path');
+        $cat_base_path = \Config::get('globalconfig.category_image_base_path');
         $image = $cat_base_path .'/'.$this->image;
 
         return $image;

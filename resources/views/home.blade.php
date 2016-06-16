@@ -7,10 +7,10 @@
 	<div class="cats">
 		<?php 
 			$count = 0;
-			$cat_images = \Config::get('frooji.category_images');
+			$cat_images = \Config::get('globalconfig.category_images');
 		?>
 		@foreach($categories as $category)
-			<a href="{{ route('get.dashboard', ['s' => $category->slug]) }}" class="col-md-4">
+			<a href="{{ route('get.product.coupons', ['s' => $category->slug]) }}" class="col-md-4">
 				<img class="image-responsive" src="{{$category->getImage()}}">
 				<div>{{ $category->name }}</div>
 			</a>
