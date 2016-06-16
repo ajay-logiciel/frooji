@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterProductsAddIsFeaturedField extends Migration
+class AddFeaturedAndStatusInProducts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,8 @@ class AlterProductsAddIsFeaturedField extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->boolean('is_featured');
+            $table->boolean('featured')->default(0);
+            $table->boolean('status')->default(1);
         });
     }
 
@@ -25,7 +26,8 @@ class AlterProductsAddIsFeaturedField extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('is_featured');
+             $table->dropColumn('featured');
+             $table->dropColumn('status');
         });
     }
 }

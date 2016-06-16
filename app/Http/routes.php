@@ -24,7 +24,9 @@ Route::group(array('middleware' => 'auth'), function() {
 
 		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
 		
-		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+		Route::get('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+		Route::get('/coupon_settings/status/{id?}',[ 'as' => 'coupon_settings_status', 'uses' => 'Admin\ProductsController@status' ]);
+		Route::get('/coupon_settings/{id}',[ 'as' => 'coupon_settings_delete', 'uses' => 'Admin\ProductsController@destroy' ]);
 	});
 });
 /* End Admin Routes */
