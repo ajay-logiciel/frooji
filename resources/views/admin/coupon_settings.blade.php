@@ -35,20 +35,34 @@
 <div class="col-xs-9">
     <table class="coupons_table" border="1">
     	<tr>
-    		<th style="width:30%" class="table_heading">Date</th>
-    		<th style="width:40%;text-align:center" class="table_heading">Coupon Name</th>
-    		<th style="width:30%;text-align:center" class="table_heading">Featured</th>
+            <th style="text-align:center" class="table_heading">Id</th>
+            <th style="text-align:center" class="table_heading">Name</th>
+            <th style="text-align:center" class="table_heading">Store Name</th>
+    		<th style="text-align:center" class="table_heading">Expiry Date</th>
+            <th style="text-align:center" class="table_heading">Featured</th>
+            <th style="text-align:center" class="table_heading">Status</th>
+    		<th style="text-align:center" class="table_heading">Actions</th>
     	</tr>
     	 @foreach($products as $key => $product)
-    	 {!! Form::open([ 'method' => 'put', 'route' => ['coupon_settings_featured', $product->id ]]) !!}
     	<tr>
-    		<td>{{ date('d/m/y', strtotime($product->start_date)) }}</td>
-    		<td style="text-align:center">{{$product->name}}</td>
+            <td style="text-align:center">{{$product->id}}</td>
+            <td style="text-align:center">{{$product->name}}</td>
+            <td style="text-align:center">{{$product->store->name}}</td>
     		<td style="text-align:center">
-    			{!! Form::checkbox('is_featured', 1, $product->is_featured, ['style' => 'zoom:1.3;cursor:pointer', 'onchange' => 'this.form.submit()']) !!}
-    		</td>
+            @if($product->end_date)
+                {{ date('d/m/y', strtotime($product->end_date)) }}
+            @endif
+            </td>
+            <td style="text-align:center">
+                {!! link_to_route('coupon_settings_featured', $product->featured, ['id'=>$product->id,'featured'=> !$product->featured], $attributes = array()) !!}
+            </td>
+            <td style="text-align:center">
+                {!! link_to_route('coupon_settings_status', $product->status, ['id'=>$product->id,'status'=> !$product->status], $attributes = array()) !!}
+            </td>
+            <td style="text-align:center">
+                 {!! link_to_route('coupon_settings_delete', 'Delete', ['id'=>$product->id]) !!}
+            </td>
     	</tr>
-    	{!! Form::close() !!}
     	@endforeach
     </table>
     <div class="page_numbers">

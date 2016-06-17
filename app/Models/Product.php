@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -21,7 +21,7 @@ class Product extends Model
      */
     public function tags()
     {
-       	return $this->belongsToMany('App\Tag', 'products_tags', 'product_id', 'tag_id');
+       	return $this->belongsToMany('App\Models\Tag', 'products_tags', 'product_id', 'tag_id');
     }
 
     /**
@@ -29,7 +29,7 @@ class Product extends Model
      */
     public function categories()
     {
-       	return $this->belongsToMany('App\Category', 'categories_products', 'product_id','category_id');
+       	return $this->belongsToMany('App\Models\Category', 'categories_products', 'product_id','category_id');
     }
 
     /**
@@ -37,7 +37,7 @@ class Product extends Model
      */
     public function merchant()
     {
-        return $this->hasOne('App\Merchant', 'id', 'merchant_id');
+        return $this->hasOne('App\Models\Merchant', 'id', 'merchant_id');
     }
 
     /**

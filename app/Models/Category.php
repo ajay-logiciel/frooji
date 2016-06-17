@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -29,7 +29,7 @@ class Category extends Model
      */
     public function products()
     {
-        return $this->belongsToMany('App\Product', 'categories_products', 'category_id', 'product_id');
+        return $this->belongsToMany('App\Models\Product', 'categories_products', 'category_id', 'product_id');
     }
 
     /**

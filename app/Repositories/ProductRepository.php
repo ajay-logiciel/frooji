@@ -3,11 +3,11 @@
 namespace App\Repositories;
 
 use App\Repositories\AppRepository;
-use App\Product;
-use App\Category;
-use App\Merchant;
-use App\Tag;
-use App\ProductMeta;
+use App\Models\Product;
+use App\Models\Category;
+use App\Models\Merchant;
+use App\Models\Tag;
+use App\Models\ProductMeta;
 use App\Http\Deals;
 use DB;
 

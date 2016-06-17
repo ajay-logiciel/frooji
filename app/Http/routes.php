@@ -11,8 +11,7 @@
 |
 */
 
-
-
+// Start For frontend
 Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
 
 Route::group(['prefix' => 'products'], function () {
@@ -27,29 +26,10 @@ Route::group(array('prefix' => 'store'), function() {
 	Route::get('/{category}', ['as' => 'store.coupons', 'uses' => 'ProductsController@getProductsByStoreSlug']);
 
 });
+// End For frontend
 
 
-Route::get('/categories', function () {
-   	return view('categories');
-});
-
-Route::get('/categories/{category}', function () {
-   	return view('coupons');
-});
-
-Route::get('/favorites', function () {
-   	return view('favorites');
-});
-
-// Route::auth();
-// 
-
-
-// Get all deals and save into D.B.
-Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
-
-/* Start Admin Routes */
-
+// Start Admin Routes 
 Route::group(['prefix' => 'admin'], function() {
 
 
@@ -79,6 +59,16 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
 		
 		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+
+		Route::get('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+		
+		Route::get('/coupon_settings/status/{id?}',[ 'as' => 'coupon_settings_status', 'uses' => 'Admin\ProductsController@status' ]);
+
+		Route::get('/coupon_settings/{id}',[ 'as' => 'coupon_settings_delete', 'uses' => 'Admin\ProductsController@destroy' ]);
+
 	});
 });
-/* End Admin Routes */
+// End Admin Routes 
+
+// Get all deals and save into D.B.
+Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
