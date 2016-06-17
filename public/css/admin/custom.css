@@ -1,0 +1,12 @@
+body{
+    background: #fff;
+}
+.full-page-wrapper{
+    position: inherit;
+    margin: 0px;
+    padding: 0 30px;
+    border-left: 1px solid #e7e7e7;
+}
+.page_numbers{
+	text-align: right;
+}

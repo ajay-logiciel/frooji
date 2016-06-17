@@ -56,15 +56,15 @@ Route::group(['prefix' => 'admin'], function() {
 		
 		Route::put('/feed_settings/activation/{id?}',[ 'as' => 'feed_settings_activation', 'uses' => 'Admin\FeedSettingsController@activation' ]);
 
-		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
+		Route::get('/products',[ 'as' => 'products', 'uses' => 'Admin\ProductsController@index' ]);
 		
-		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+		Route::put('/products/featured/{id?}',[ 'as' => 'products_featured', 'uses' => 'Admin\ProductsController@featured' ]);
 
-		Route::get('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+		Route::get('/products/featured/{id?}',[ 'as' => 'products_featured', 'uses' => 'Admin\ProductsController@featured' ]);
 		
-		Route::get('/coupon_settings/status/{id?}',[ 'as' => 'coupon_settings_status', 'uses' => 'Admin\ProductsController@status' ]);
+		Route::get('/products/status/{id?}',[ 'as' => 'products_status', 'uses' => 'Admin\ProductsController@status' ]);
 
-		Route::get('/coupon_settings/{id}',[ 'as' => 'coupon_settings_delete', 'uses' => 'Admin\ProductsController@destroy' ]);
+		Route::get('/products/{id}',[ 'as' => 'products_delete', 'uses' => 'Admin\ProductsController@destroy' ]);
 
 	});
 });

@@ -27,7 +27,7 @@
                                 {!! link_to('/admin/feed_settings', 'Feed Settings') !!}
                             </li>
                             <li class="active2">
-                                {!! link_to('/admin/coupon_settings', 'Coupon Settings') !!}
+                                {!! link_to('/admin/products', 'Products') !!}
                             </li>
                         </ul>
                     </div>

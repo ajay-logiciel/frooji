@@ -68,4 +68,48 @@ class ProductPresenter extends Presenter
 	{
 		dd($this->merchant);
 	}
+
+
+			/* Admin Panel */
+    /**
+     * get Featured
+     */
+    public function featuredIcon()
+    {
+        $class = "fa-times";
+        if($this->featured) {
+
+            $class = 'fa-check';
+        }
+
+        return '<i class="fa '. $class .'"></i>';
+    }
+
+    /**
+     * get status
+     */
+    public function statusIcon()
+    {
+    	$class = "fa-times";
+        if($this->status) {
+
+            $class = 'fa-check';
+        }
+
+        return '<i class="fa '. $class .'"></i>';
+    }
+
+    /**
+     * get expiry date
+     */
+    public function getExpiryDate()
+    {
+    	if(!$this->end_date) {
+			return;
+		}
+
+		$time = strtotime($this->end_date);
+		$myFormatForView = date("m/d/Y", $time);
+		return 'Exp:&nbsp;'. $myFormatForView;
+    }
 }

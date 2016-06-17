@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Admin\AppController;
-use App\Models\Products;
+use App\Models\Product;
 
 class ProductsController extends AppController
 {
@@ -19,11 +19,11 @@ class ProductsController extends AppController
     public function index()
     {
         $limit = \Config::get('globalconfig.admin.products_limit');
-        $products = Products::select('id' ,'merchant_id', 'name' , 'end_date', 'featured', 'status')
+        $products = Product::select('id' ,'merchant_id', 'name' , 'end_date', 'featured', 'status')
                             ->orderby('created_at', 'desc')
-                            ->with(['store'])
+                            ->with(['merchant'])
                             ->paginate($limit);
-        return view('admin.coupon_settings', ['products' => $products]);
+        return view('admin.products', ['products' => $products]);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductsController extends AppController
     {
         $featured = (bool)$request->input('featured');
 
-        $product = Products::findOrFail($id);
+        $product = Product::findOrFail($id);
         $product->featured = $featured;
         $product->save();
         
@@ -53,7 +53,7 @@ class ProductsController extends AppController
      */
     public function destroy($id)
     {
-        $product = Products::findOrFail($id);
+        $product = Product::findOrFail($id);
         $product->delete();
         
         return redirect()->back();
@@ -70,7 +70,7 @@ class ProductsController extends AppController
     {
         $status = (bool)$request->input('status');
         
-        $product = Products::findOrFail($id);
+        $product = Product::findOrFail($id);
         $product->status = $status;
         $product->save();
         
