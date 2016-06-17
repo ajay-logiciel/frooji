@@ -15,9 +15,9 @@ class UsersTableSeeder extends Seeder
         User::truncate();
 
         DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'admin1@test.com',
-            'password' => Hash::make('Dummy123'),
+            'name' => 'Super Admin',
+            'email' => 'dev@logicielsolutions.co.in',
+            'password' => bcrypt('123456'),
         ]);
     }
 }

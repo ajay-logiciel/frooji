@@ -11,23 +11,6 @@
 |
 */
 
-/* Start Admin Routes */
-Route::group(array('middleware' => 'auth'), function() {
-
-	Route::group(array('prefix' => 'admin'), function() {
-
-		Route::get('/',[ 'as' => 'admin', 'uses' => 'Admin\FeedSettingsController@index' ]);
-		
-		Route::get('/feed_settings',[ 'as' => 'feed_settings', 'uses' => 'Admin\FeedSettingsController@index' ]);
-		
-		Route::put('/feed_settings/activation/{id?}',[ 'as' => 'feed_settings_activation', 'uses' => 'Admin\FeedSettingsController@activation' ]);
-
-		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
-		
-		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
-	});
-});
-/* End Admin Routes */
 
 
 Route::get('/', ['as' => 'get.dashboard', 'uses' => 'ProductsController@getDashboardContents']);
@@ -58,8 +41,44 @@ Route::get('/favorites', function () {
    	return view('favorites');
 });
 
-Route::auth();
+// Route::auth();
+// 
+
 
 // Get all deals and save into D.B.
 Route::get('/get-deals', ['as' => 'get.deals', 'uses' => 'ProductsController@getDeals']);
 
+/* Start Admin Routes */
+
+Route::group(['prefix' => 'admin'], function() {
+
+
+	// Authentication Routes...
+    Route::get('/', ['as' => 'admin.login', 'uses' => 'Auth\Admin\AuthController@showLoginForm']);
+    Route::get('/login', ['as' => 'admin.login', 'uses' => 'Auth\Admin\AuthController@showLoginForm']);
+    Route::post('/login', ['as' => 'admin.post.login', 'uses' => 'Auth\Admin\AuthController@login']);
+
+    // Registration Routes...
+    Route::get('/register', 'Auth\Admin\AuthController@showRegistrationForm');
+    Route::post('/register', 'Auth\Admin\AuthController@register');
+
+    // Password Reset Routes...
+    Route::get('/password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+    Route::post('/password/email', 'Auth\PasswordController@sendResetLinkEmail');
+    Route::post('/password/reset', 'Auth\PasswordController@reset');
+
+	Route::group(['middleware' => 'admin.auth'], function() {
+    	Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\Admin\AuthController@logout']);
+		
+		Route::get('/dashboard',[ 'as' => 'admin', 'uses' => 'Admin\FeedSettingsController@index' ]);
+		
+		Route::get('/feed_settings',[ 'as' => 'feed_settings', 'uses' => 'Admin\FeedSettingsController@index' ]);
+		
+		Route::put('/feed_settings/activation/{id?}',[ 'as' => 'feed_settings_activation', 'uses' => 'Admin\FeedSettingsController@activation' ]);
+
+		Route::get('/coupon_settings',[ 'as' => 'coupon_settings', 'uses' => 'Admin\ProductsController@index' ]);
+		
+		Route::put('/coupon_settings/featured/{id?}',[ 'as' => 'coupon_settings_featured', 'uses' => 'Admin\ProductsController@featured' ]);
+	});
+});
+/* End Admin Routes */
