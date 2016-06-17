@@ -69,14 +69,18 @@ class DashboardRepository extends AppRepository
 	 * @access public
 	 * @return Collections
 	 */
-	public function getStoreBySlug($slug)
+	public function getAllProductOfSlug($slug)
 	{
-		$store =  Merchant::with(['products'])
-							->where('slug', $slug)
-							->whereActive()
-			                ->first();
-				
-		return $store;
+		$products = Product::join('merchants', function($join) use($slug){
+						 
+								$join->on('products.merchant_id', '=', 'merchants.id');
+								$join->where('merchants.slug', '=', $slug);
+								$join->where('merchants.status', '=', true);
+							})
+							->select('products.*', 'merchants.slug as merchant_slug', 'merchants.name as merchant_name', 'merchants.image as merchant_image')             
+						    ->paginate(10);
+						   
+		return $products;
 	}
 
 	/**
@@ -85,14 +89,13 @@ class DashboardRepository extends AppRepository
 	 * @access public
 	 * @return Collections
 	 */
-	public function getCategoryBySlug($slug)
+	public function getAllProductsOfCategory($slug)
 	{
-		$category =  Category::with(['products'])
-							->where('slug', $slug)
-							->whereActive()
-			                ->first();
-	
-		return $category;
+	    $products = Product::with(['merchant'])
+	    					->whereCategories($slug)
+	    					->paginate(10);
+	    				
+		return $products;
 	}
 
 	/**

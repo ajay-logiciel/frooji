@@ -49,6 +49,29 @@ class Product extends Model
     }
 
     /**
+     *  filter by tags.
+     *  
+     *  @param  $id: integer of node id.
+     *  @return array of breadcrumb list.
+     */
+    public function scopeWhereCategories($builder, $slug) {
+
+        $category = Category::where('slug', $slug)->first();
+        if(empty($category)) {
+            return $query;
+        }
+
+        $query = "
+            select temp.product_id from(
+                select categories_products.product_id from `categories_products` where categories_products.category_id = ".$category->id."
+            ) temp group by temp.product_id";
+
+        return $builder->join(\DB::raw("($query) as assigned_cat"), function($query) {
+            $query->on('assigned_cat.product_id', '=', 'products.id');
+        });
+    }
+
+    /**
      * Get coupon image
      */
     public function getCouponImage()
@@ -66,5 +89,27 @@ class Product extends Model
 
 
         // If store loog not exist then display store url capture. 
+    }
+
+    /**
+     * get image of specific category.
+     */
+    public function getStoreImage()
+    {
+        $store_base_path = \Config::get('globalconfig.store_image_base_path'); 
+        $image = $store_base_path .'/'.$this->merchant_image;
+
+        return $image;
+    }
+
+     /**
+     * get image of specific category.
+     */
+    public function getCategoryImage()
+    {
+        $cat_base_path = \Config::get('globalconfig.category_image_base_path');
+        $image = $cat_base_path .'/'.$this->image;
+
+        return $image;
     }
 }

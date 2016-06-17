@@ -2,26 +2,25 @@
 
 @section('content')
 
-<!-- Stores Start -->
-<div style="width:100%">
-	<!-- Image -->
-	<div class="store_top_image">
-		<a href="#">
-			<img class="image-responsive" src="{{$store->getImage()}}"/>
-		</a>
+
+	<!-- Stores Start -->
+	<div style="width:100%">
+		<!-- Image -->
+		<div class="store_top_image">
+			<a href="#">
+				<img class="image-responsive" src="{{ $store_image }}"/>
+			</a>
+		</div>
 	</div>
-	<!-- Heading -->
-	<!-- <h3 style="text-align:center;width:76%;text-align:center;float:left;padding-top:30px;">
-		<img class="image-responsive" src="{{$store->getImage()}}"/>
-	</h3> -->
-</div>
-<div class="coupon_left">
+	<div class="coupon_left">
 
-	@foreach($store->products as $product)
-		@include('partials.coupon-listing', ['product' => $product, 'catOrMerchant' => $store])
-	@endforeach
+		@foreach($products as $product)
+				@include('partials.coupon-listing', ['product' => $product])
+		@endforeach
 
-</div>
+		{{$products->links()}}
+	</div>
+
 <div class="store_right">
 	<div class="subcription">
 		<h2>Frooji Coupon Subscription</h2>
