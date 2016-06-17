@@ -9,5 +9,8 @@ return [
 		'feature_product_limit'	=> 6
 	],
 	'store_image_base_path' => "/images/stores",
-	'category_image_base_path' => "/images/categories"
+	'category_image_base_path' => "/images/categories",
+	'admin'	=> [
+		'products_limit' => 10,
+	],
 ];
