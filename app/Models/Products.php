@@ -10,6 +10,6 @@ class Products extends Model
 
     public function store()
     {
-        return $this->belongsTo('App\Models\Stores', 'merchant_id');
+        return $this->belongsTo('App\Models\Merchant', 'merchant_id');
     }
 }

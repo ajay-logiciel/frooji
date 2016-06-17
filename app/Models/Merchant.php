@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -17,7 +17,7 @@ class Merchant extends Model
      */
     public function products()
     {
-        return $this->hasMany('App\Product', 'merchant_id', 'id');
+        return $this->hasMany('App\Models\Product', 'merchant_id', 'id');
     }
 
     /**
