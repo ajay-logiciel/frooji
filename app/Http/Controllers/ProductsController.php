@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Repositories\ProductRepository;
 use App\Repositories\DashboardRepository;
-use App\Product;
+use App\Models\Product;
 use View, Config;
 
 class ProductsController extends Controller

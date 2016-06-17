@@ -1,35 +1,9 @@
 $(function() {
 
-	/*$('.coupon').on('click', '.use-coupon-link', function(e) {
-		e.preventDefault();
-
-		var $this = $(this);
-		var id = $this.attr('data-id');
-		//var url = Frooji.getUseCouponPopup;
-		var url = '/products/get-coupon-popup/'+id;
-		var $promise = $.ajax({
-			url: url,
-			type: 'get',
-			beforeSend: function() {
-				//$table_wrapper.find('.full-screen-loader').show();
-			}
-		});
-
-		$promise.done(function(response) {
-
-			var template = response.template;
-			//$table_wrapper.find('.table-responsive').html(template);
-		});
-
-		$promise.fail(function(response) {
-			//$table_wrapper.find('.full-screen-loader').hide();
-		});
-
-		$promise.always(function(response) {
-			//$table_wrapper.find('.full-screen-loader').hide();
-		});
-	});*/
-
+	$('body').on('hidden.bs.modal', '.modal', function () {
+	  	$(this).removeData('bs.modal');
+	});
+	
 });
 
 // alert message popup.
